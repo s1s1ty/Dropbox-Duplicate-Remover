@@ -22,6 +22,7 @@ def folder_traverse(path):
             folder_traverse(i.path_display)
         else:
             try:
+                global duplicate
                 duplicate = True
                 file_stas[i.name][0] += 1
                 file_stas[i.name][1].append(i.path_display)
