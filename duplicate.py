@@ -24,10 +24,10 @@ def folder_traverse(path):
             try:
                 global duplicate
                 duplicate = True
-                file_stas[i.name][0] += 1
-                file_stas[i.name][1].append(i.path_display)
+                file_stas[i.content_hash][0] += 1
+                file_stas[i.content_hash][1].append(i.path_display)
             except:
-                file_stas[i.name] = [1, [i.path_display]]
+                file_stas[i.content_hash] = [1, [i.path_display]]
 
 
 def show():
